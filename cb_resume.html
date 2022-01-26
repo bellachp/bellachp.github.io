@@ -1,0 +1,726 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>Chris Bellavia</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>/* Utils */
+/*----- Colors -----*/
+/*----- Fonts -----*/
+/*----- Dimensions and sizes -----*/
+/* Base */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
+
+html {
+  background: white;
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: white;
+  margin: 50px 0 100px;
+  letter-spacing: .3px;
+  color: #39424B;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: none;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+
+h3 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: .4px;
+}
+
+h3.bold {
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+h4.bold {
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+h5.italic {
+  font-style: italic;
+}
+
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #2895F1;
+}
+
+a .fa-external-link {
+  font-size: 10px;
+  vertical-align: text-top;
+}
+
+p,
+li {
+  font-size: 11px;
+}
+
+blockquote {
+  font-size: 11px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 10px 25px;
+}
+
+em {
+  color: #999;
+}
+
+ul {
+  margin: 10px 0 0;
+  -webkit-padding-start: 25px;
+}
+
+ul li {
+  padding-left: 10px;
+}
+
+ul.minimal {
+  list-style: none;
+  padding: 0;
+}
+
+ul.minimal li {
+  margin-bottom: 3px;
+  padding-left: 0;
+}
+
+ul.two-column {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 28px;
+  column-count: 2;
+  column-gap: 28px;
+}
+
+ul.two-column li {
+  padding-left: 0;
+}
+
+@page {
+  size: A4;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.keyline {
+  width: 45px;
+  margin: 8px 0 10px;
+  border-top: 1px solid #56817A;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile-pic {
+  margin-top: -5px;
+  margin-right: 18px;
+}
+
+.profile-pic img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: 2px solid #56817A;
+}
+
+.summary {
+  margin: 5px 0 5px;
+}
+
+.sublink {
+  font-size: 70%;
+  font-weight: 200;
+  color: dimgray;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Layouts */
+.page {
+  background: white;
+  width: 612px;
+  min-height: 792px;
+  display: block;
+  margin: 0 auto;
+  border-top: 10px solid #56817A;
+  padding: 36px 22px 30px 34px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-column {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+  word-wrap: break-word;
+}
+
+.right-column {
+  width: auto;
+  overflow: hidden;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+
+  .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 36px 0 30px;
+    box-shadow: none;
+  }
+
+  .page .resume-header,
+  .page .resume-content {
+    padding: 0 22px 0 34px;
+  }
+
+  .container {
+    page-break-inside: avoid;
+  }
+
+  .work-container .item {
+    page-break-inside: avoid;
+  }
+
+  .fa-external-link {
+    display: none;
+  }
+}
+
+/* Components */
+.info-tag-container {
+  margin-bottom: 5px;
+}
+
+.info-tag-container .fa {
+  font-size: 14px;
+  width: 12px;
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.info-tag-container .fa.fa-map-marker {
+  font-size: 16px;
+}
+
+.info-tag-container .fa.fa-mobile {
+  font-size: 18px;
+}
+
+.info-tag-container .fa.fa-envelope-o {
+  font-size: 12px;
+}
+
+.info-tag-container .fa.fa-desktop {
+  font-size: 11px;
+}
+
+.info-tag-container .fa.fa-external-link {
+  width: auto;
+  font-size: inherit;
+  vertical-align: text-top;
+}
+
+.info-tag-container .info-text {
+  font-size: 12px;
+  text-transform: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 139px;
+}
+
+.references-container .fa {
+  font-size: 14px;
+}
+
+.education-container .location {
+  padding-bottom: 6px;
+  font-weight: 400;
+}
+
+.education-container .specialization {
+  text-transform: none;
+  font-style: italic;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-skill {
+  font-size: 80%;
+}
+
+.skill {
+  margin: .15em;
+  padding: .15em;
+  background: ghostwhite;
+  border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+  <main id="resume" class="page">
+    <header class="resume-header clearfix">
+        <div class="profile-header pull-left">
+            <h1>Chris Bellavia</h1>
+            <h2>Software Developer | Mathematical Scientist</h2>
+        </div>
+        <div class="profile-pic pull-right">
+        </div>
+    </header>
+    <div class="resume-content">
+      <aside class="left-column">
+        <div class="container about-container">
+            <div class="title">
+                <h3>About</h3>
+                <div class="keyline"></div>
+            </div>
+                <div class="info-tag-container">
+                    <i class="fa fa-map-marker"></i>
+                
+                        <h6 class="info-text"> St. Louis Missouri  US</h6>
+                </div>
+        
+        
+                <div class="info-tag-container">
+                    <i class="fa fa-envelope-o"></i>
+                
+                        <h6 class="info-text">
+                            <a href="mailto:bella.via.chris@gmail.com" target="_blank">
+                                bella.via.chris@gmail.com
+                            </a>
+                        </h6>
+                </div>
+        
+                <div class="info-tag-container">
+                    <i class="fa fa-mobile"></i>
+                
+                        <h6 class="info-text">(314) 805-8012</h6>
+                </div>
+        
+                <div class="info-tag-container">
+                    <i class="fa fa-globe"></i>
+                
+                        <h6 class="info-text">
+                            <a href="https://bellachp.github.io" target="_blank">
+                                bellachp.github.io
+                            </a>
+                        </h6>
+                </div>
+        
+                                <div class="info-tag-container">
+                                    <i class="fa fa-linkedin-square"></i>
+                                
+                                        <h6 class="info-text">
+                                            <a href="https://www.linkedin.com/in/bellaviachris/" target="_blank">
+                                                bellaviachris
+                                            </a>
+                                        </h6>
+                                </div>
+        </section>
+            <div class="skills-container">
+                    <section class="container">
+                            <div class="title">
+                                <h3>Domains</h3>
+                                <div class="keyline"></div>
+                            </div>                    <div class="minimal">
+                                    <h6>Machine Learning</h6>
+                                    <h6>Statistical Modeling</h6>
+                                    <h6>Distributed Computing</h6>
+                                    <h6>Image Processing</h6>
+                                    <h6>Computer Vision</h6>
+                                    <h6>Numerical Methods</h6>
+                            </div>
+                    </section>
+                    <section class="container">
+                            <div class="title">
+                                <h3>Programming</h3>
+                                <div class="keyline"></div>
+                            </div>                    <div class="minimal">
+                                    <h6>Python</h6>
+                                    <h6>C++</h6>
+                                    <h6>Scala</h6>
+                                    <h6>Java</h6>
+                                    <h6>C#</h6>
+                                    <h6>SQL</h6>
+                                    <h6>Bash</h6>
+                                    <h6>R</h6>
+                            </div>
+                    </section>
+                    <section class="container">
+                            <div class="title">
+                                <h3>Technologies</h3>
+                                <div class="keyline"></div>
+                            </div>                    <div class="minimal">
+                                    <h6>GIT, Docker</h6>
+                                    <h6>Amazon Web Services (AWS)</h6>
+                                    <h6>EC2, S3, Lambda, ECS, ECR,</h6>
+                                    <h6>Redshift, API Gateway</h6>
+                                    <h6>Hadoop, Spark, Neo4j, NoSQL, Kafka, zeroMQ, Airflow, Prefect, Google Earth Engine</h6>
+                            </div>
+                    </section>
+            </div>
+            <div class="container languages-container">
+                <div class="title">
+                    <h3>Languages</h3>
+                    <div class="keyline"></div>
+                </div>
+                <ul class="minimal">
+                        <li>
+                            <h6>English <em>(Native)</em></h6>
+                        </li>
+                        <li>
+                            <h6>Spanish <em>(~C1 Advanced)</em></h6>
+                        </li>
+                </ul>
+            </div>
+      </aside>
+      <div class="right-column">
+                <div class="container summary-container">
+                    <div class="title">
+                        <h3>Summary</h3>
+                        <div class="keyline"></div>
+                    </div>            <p class="summary">
+                        Chris is a technologist &amp; leader specializing in research engineering, advanced algorithm analysis &amp; development, and data science &amp; engineering. He has worked in the aerospace, medical device, agriculture &amp; biotech industries, with experience in multiple domains including machine learning, data analytics, computer vision &amp; image processing, &amp; cloud software engineering.
+                    </p>
+                </div>
+        <div class="container work-container">
+            <div class="title">
+                <h3>Experience</h3>
+                <div class="keyline"></div>
+            </div>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                Benson Hill
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">02/2021</span>
+                                <span class="endDate"> - Present</span>
+                        </h5>
+                    </div>
+        
+                    <h4>Manager, Software Engineering | Field &amp; Environment</h4>
+        
+        
+                    <p class="summary">Lead &amp; grow team of software &amp; data engineers in conjunction with the Field &amp; Environment Data Science team. Build structured &amp; unstructured data pipelines for geospatial, weather, &amp; agronomic data using AWS serverless architectures. Drive cross-org collaboration to align teams &amp; deliverables across Grower Field Operations, Digital-AgTech, &amp; Data Science.</p>
+        
+                    <ul>
+                        <li>Enabled commercial operations to scale their contracted acreage from 20K to 70K acres in 2021.</li>
+                        <li>Created department strategy &amp; roadmap for adoption of ML Ops tooling &amp; practices to accelerate Data Science model development.</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                Slalom Consulting
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">09/2019</span>
+                                <span class="endDate"> - 01/2021</span>
+                        </h5>
+                    </div>
+        
+                    <h4>Senior Consultant | Data &amp; Analytics Group</h4>
+        
+        
+                    <p class="summary">Led data science &amp; engineering projects &amp; teams for enterprise clients. Mentored data scientists, data engineers, &amp; analytics professionals.</p>
+        
+                    <ul>
+                        <li>Developed models &amp; visualizations for predicting pest prevalence in agricultural field trials.</li>
+                        <li>Developed image processing algorithms in Python for UAV geospatial imagery.</li>
+                        <li>Designed AWS cloud analytics pipeline for on-demand processing of experiment data using Kafka, Redshift, &amp; AWS Lambda.</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                Stereotaxis, Inc
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">07/2017</span>
+                                <span class="endDate"> - 08/2019</span>
+                        </h5>
+                    </div>
+        
+                    <h4>Clinical Software Engineer | Advanced Concepts Group</h4>
+        
+        
+                    <p class="summary">Developed prototype software &amp; algorithms in C++ &amp; Python for new features for the Navigant remote magnetic navigation system. Navigant is used to perform catheter navigation during ablation therapy, a treatment for cardiac arrhythmia.</p>
+        
+                    <ul>
+                        <li>Developed surface fitting algorithm to detect geometric positions during navigation.</li>
+                        <li>Created impedance prediction models for predicting catheter contact to heart tissue.</li>
+                        <li>Led field investigations &amp; testing to support physicians using new system features.</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                The Boeing Company
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">06/2013</span>
+                                <span class="endDate"> - 07/2017</span>
+                        </h5>
+                    </div>
+        
+                    <h4>Advanced Technologist | Boeing Research &amp; Technology</h4>
+        
+        
+                    <p class="summary">As an Advanced Technologist, performed research and development of distributed machine learning technologies for prognostic vehicle health management. As a Software Engineer, developed image processing models for factory automation &amp; defect detection using C++ &amp; openCV.</p>
+        
+                    <ul>
+                        <li>Deployed models for anomaly &amp; defect detection using Apache Spark &amp; Hadoop.</li>
+                        <li>Integrated software with mechanical components &amp; Keyence laser sensors for robotic defect detection system.</li>
+                        <li>Co-authored 3 patents.</li>
+                    </ul>
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                Revenue Solutions, Inc
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">05/2012</span>
+                                <span class="endDate"> - 06/2013</span>
+                        </h5>
+                    </div>
+        
+                    <h4>Associate Consultant</h4>
+        
+        
+                    <p class="summary">Developed SQL, business intelligence, and database design in Teradata. Interfaced with clients to determine business rules and develop deliverables.</p>
+        
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                MST Mathematics Department
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">08/2010</span>
+                                <span class="endDate"> - 05/2012</span>
+                        </h5>
+                    </div>
+        
+                    <h4>Graduate Teaching Assistant</h4>
+        
+        
+                    <p class="summary">Instructor for Differential Equations, Calculus, and Algebra/Trigonometry courses.</p>
+        
+                </section>
+        </div>
+        <div class="container project-container">
+            <div class="title">
+                <h3>Open Source Projects</h3>
+                <div class="keyline"></div>
+            </div>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                <a href="https://alex.github.io/nyt-2020-election-scraper/battleground-state-changes.html" target="_blank">
+                                    NYT Vote Scraper
+                                        <span class="sublink">∙ <a href="https://alex.github.io/nyt-2020-election-scraper/battleground-state-changes.html" target="_blank" class="sublink">https://alex.github.io/nyt-2020-election-scraper/battleground-state-changes.html</a></span>
+                                </a>
+                        </h3>
+                        <h5 class="italic pull-right">
+                                11/2020
+                                </h5>
+                    </div>
+                      <h4>
+                        Open-source webpage developed hack-a-thon style during the 2020 election to provide increased visibility to the after-hours state voting counts.
+                      </h4>
+        
+        
+        
+        
+                    <ul>
+                        <li>Pushed several commits via PR to calculate real-time updates in moving averages &amp; remaining votes needed for trailing candidate.</li>
+                    </ul>
+                </section>
+        </div>
+        <div class="container education-container">
+            <div class="title">
+            <h3>Education</h3>
+            <div class="keyline"></div>
+        </div> 
+            <section class="item">
+                <div class="section-header clearfix">
+            <h3 class="bold pull-left">
+                    Missouri University of Science &amp; Technology
+            </h3>
+            <h5 class="italic pull-right">
+                    05/2012
+                    </h5>
+        </div>
+         
+                <h4>M.S. Applied Mathematics</h4>
+        
+                <h5>3.9</h5>
+                      </section>
+        
+            <section class="item">
+                <div class="section-header clearfix">
+            <h3 class="bold pull-left">
+                    Missouri University of Science &amp; Technology
+            </h3>
+            <h5 class="italic pull-right">
+                    05/2010
+                    </h5>
+        </div>
+         
+                <h4>B.S. Applied Mathematics</h4>
+        
+                <h5>3.5</h5>
+                      </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
